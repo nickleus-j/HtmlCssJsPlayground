@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CefSharp;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -31,7 +32,7 @@ namespace WebPlayground.Wpf
             string js = "<script>" + jsTextBox.Text + "</script>";
 
             string fullHtml = html + css + js;
-            webBrowser.NavigateToString(fullHtml);
+            webBrowser.LoadHtml(fullHtml);
         }
 
         private void Clear_Click(object sender, RoutedEventArgs e)
@@ -39,7 +40,7 @@ namespace WebPlayground.Wpf
             htmlTextBox.Clear();
             cssTextBox.Clear();
             jsTextBox.Clear();
-            webBrowser.NavigateToString("");
+            webBrowser.LoadHtml("");
         }
     }
 }
