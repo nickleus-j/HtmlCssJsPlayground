@@ -24,8 +24,16 @@ namespace WebPlayground.Wpf
         public MainWindow()
         {
             InitializeComponent();
+            htmlTextBox.Text = Resource.HtmlBody;
+            cssTextBox.Text = Resource.CssContent;
+            jsTextBox.Text = Resource.JSContent;
+            RunHtml();
         }
         private void Run_Click(object sender, RoutedEventArgs e)
+        {
+            RunHtml();
+        }
+        private void RunHtml()
         {
             string html = htmlTextBox.Text;
             string css = "<style>" + cssTextBox.Text + "</style>";
@@ -34,7 +42,6 @@ namespace WebPlayground.Wpf
             string fullHtml = html + css + js;
             webBrowser.LoadHtml(fullHtml);
         }
-
         private void Clear_Click(object sender, RoutedEventArgs e)
         {
             htmlTextBox.Clear();
