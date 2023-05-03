@@ -40,7 +40,23 @@ namespace WebPlayground.Wpf
             string js = "<script>" + jsTextBox.Text + "</script>";
 
             string fullHtml = html + css + js;
-            webBrowser.LoadHtml(fullHtml);
+            if (isValidateContent())
+            {
+                webBrowser.LoadHtml(fullHtml);
+                Title = "Valid";
+            }
+            else
+            {
+                Title = "Invalid";
+            }
+            
+        }
+        private bool isValidateContent()
+        {
+            bool validCss=WebLangValidator.IsValidCss(cssTextBox.Text);
+            return validCss
+                && WebLangValidator.IsValidECMAScript(jsTextBox.Text)
+                && WebLangValidator.IsValidHtml(htmlTextBox.Text);
         }
         private void Clear_Click(object sender, RoutedEventArgs e)
         {
