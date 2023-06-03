@@ -61,9 +61,9 @@ namespace WebPlayground.Wpf {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to a{
-        ///  font-size:120%;
-        ///  color:#207621}.
+        ///   Looks up a localized string similar to ul{list-style:none}
+        ///#proList li{background:lime;}
+        ///#conList li{background:crimson;}.
         /// </summary>
         internal static string CssContent {
             get {
@@ -72,8 +72,32 @@ namespace WebPlayground.Wpf {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &lt;div&gt;
-        /// &lt;svg xmlns:svg=&quot;http://www.w3.org/2000/svg&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; version=&quot;1.1&quot; width=&quot;800&quot; height=&quot;420&quot; id=&quot;svg&quot;&gt;&lt;image height=&quot;420&quot; width=&quot;800&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; xlink:href=&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/The_Sun_by_the_Atmospheric_Imaging_Assembly_of_NASA%27s_Solar_Dynamics_Observatory_-_20100819.jpg/1280px-The_Sun_by_the_Atmospheric_Imaging_Assembly_of_NASA%27s_Solar_Dynamics_Observatory_-_20100819.jpg&quot; transform=&quot;matrix(1 0 0 1 0  [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to &lt;h1&gt;Pros and Cons&lt;/h1&gt;
+        ///&lt;table&gt;
+        ///&lt;tr&gt;
+        ///&lt;td&gt;
+        ///  &lt;h2&gt;Pros&lt;/h2&gt;
+        ///&lt;/td&gt;
+        ///&lt;td&gt;
+        ///   &lt;h2&gt;Cons&lt;/h2&gt;
+        ///&lt;/td&gt;
+        ///&lt;/tr&gt;
+        ///
+        ///&lt;tr&gt;
+        ///&lt;td&gt;
+        ///&lt;input type=&quot;text&quot; id=&quot;proInput&quot;&gt;
+        ///  &lt;button onclick=&quot;addPro()&quot;&gt;Add&lt;/button&gt;
+        ///&lt;/td&gt;
+        ///&lt;td&gt;
+        ///  &lt;input type=&quot;text&quot; id=&quot;conInput&quot;&gt;
+        ///  &lt;button onclick=&quot;addCon()&quot;&gt;Add&lt;/button&gt;
+        ///
+        ///&lt;/td&gt;
+        ///&lt;tr&gt;
+        ///&lt;td&gt; &lt;ul id=&quot;proList&quot;&gt;&lt;/ul&gt;&lt;/td&gt;
+        ///&lt;td&gt;  &lt;ul id=&quot;conList&quot;&gt;&lt;/ul&gt;&lt;/td&gt;
+        ///&lt;/tr&gt;
+        ///&lt;/table&gt;.
         /// </summary>
         internal static string HtmlBody {
             get {
@@ -82,19 +106,22 @@ namespace WebPlayground.Wpf {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to var svg = document.getElementsByTagName(&apos;svg&apos;)[0];
-        ///var svg_xml = (new XMLSerializer()).serializeToString(svg),
-        ///    blob = new Blob([svg_xml], {type:&apos;image/svg+xml;charset=utf-8&apos;}),
-        ///    url = window.URL.createObjectURL(blob);
+        ///   Looks up a localized string similar to function addPro() {
+        ///      var proInput = document.getElementById(&quot;proInput&quot;);
+        ///      var proList = document.getElementById(&quot;proList&quot;);
         ///
-        ///canvg(&apos;canvas2&apos;, svg_xml);
-        ///var a = document.getElementById(&apos;imgId&apos;);
+        ///      var proText = proInput.value;
+        ///      if (proText.trim() !== &quot;&quot;) {
+        ///        var listItem = document.createElement(&quot;li&quot;);
+        ///        listItem.textContent = proText;
+        ///        proList.appendChild(listItem);
+        ///        proInput.value = &quot;&quot;;
+        ///      }
+        ///    }
         ///
-        ///function dlCanvas() {
-        ///    var dt = canvas2.toDataURL(&apos;image/png&apos;);
-        ///    this.href = dt;
-        ///};
-        ///a.addEventListener(&apos;click&apos;, dlCanvas, false);.
+        ///    function addCon() {
+        ///      var conInput = document.getElementById(&quot;conInput&quot;);
+        ///      var conList = document.getE [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string JSContent {
             get {
