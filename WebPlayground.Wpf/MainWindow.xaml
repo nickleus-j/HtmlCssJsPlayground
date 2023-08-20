@@ -11,14 +11,10 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
             <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
-        <StackPanel Grid.Row="0" Orientation="Horizontal" Background="#FFD5EBA1">
-            <Button Content="Run" Click="Run_Click" Margin="0,0,5,0" FontSize="16"/>
-            <Button Content="Clear" Click="Clear_Click" Margin="3,0,0,0" FontSize="16"/>
-        </StackPanel>
-        <Grid Grid.Row="1"  Background="#FFCFE6DD">
+
+        <Grid Grid.Row="0"  Background="#FFCFE6DD">
             <Grid.RowDefinitions>
                 <RowDefinition Height="20" ></RowDefinition>
                 <RowDefinition Height="auto" ></RowDefinition>
@@ -35,9 +31,16 @@
             <TextBox x:Name="cssTextBox" Grid.Column="1" Grid.Row="1" TextWrapping="Wrap" AcceptsReturn="True" Margin="5" Height="200" FontFamily="Consolas"/>
             <TextBox x:Name="jsTextBox" Grid.Column="2" Grid.Row="1" TextWrapping="Wrap" AcceptsReturn="True" Margin="5" Height="200" FontFamily="Consolas"/>
         </Grid>
-        <!--<WebBrowser x:Name="webBrowser" Grid.Row="2"/>-->
-        <wpf:ChromiumWebBrowser x:Name="webBrowser" Grid.Row="2">
+        <DockPanel Grid.Row="1">
+            <StackPanel Orientation="Horizontal" Background="#FFD5EBA1" DockPanel.Dock="Top">
+                <Button Content="Run" Click="Run_Click" Margin="0,0,5,0" FontSize="16"/>
+                <Button Content="Clear" Click="Clear_Click" Margin="3,0,0,0" FontSize="16"/>
+            </StackPanel>
+            <wpf:ChromiumWebBrowser x:Name="webBrowser" DockPanel.Dock="Bottom">
 
-        </wpf:ChromiumWebBrowser>
+            </wpf:ChromiumWebBrowser>
+        </DockPanel>
+        
+        
     </Grid>
 </Window>
