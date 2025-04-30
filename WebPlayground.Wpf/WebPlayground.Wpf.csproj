@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="CefSharp.Wpf.NETCore" Version="115.3.130" />
+    <PackageReference Include="CefSharp.Wpf.NETCore" Version="135.0.220" />
   </ItemGroup>
 
   <ItemGroup>
@@ -32,15 +32,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Update="chromiumembeddedframework.runtime.win-arm64" Version="112.3.0" />
+    <PackageReference Update="chromiumembeddedframework.runtime.win-arm64" Version="135.0.22" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Update="chromiumembeddedframework.runtime.win-x64" Version="112.3.0" />
+    <PackageReference Update="chromiumembeddedframework.runtime.win-x64" Version="135.0.22" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Update="chromiumembeddedframework.runtime.win-x86" Version="112.3.0" />
+    <PackageReference Update="chromiumembeddedframework.runtime.win-x86" Version="135.0.22" />
   </ItemGroup>
 
 </Project>

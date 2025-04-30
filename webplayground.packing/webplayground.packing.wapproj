@@ -118,9 +118,15 @@
   </ItemGroup>
   <Import Project="$(WapProjPath)\Microsoft.DesktopBridge.targets" />
   <ItemGroup>
-    <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.22621.755" PrivateAssets="all" />
+    <PackageReference Include="CefSharp.Wpf.NETCore" Version="135.0.220" />
+    <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.26100.1742" PrivateAssets="all" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WebPlayground.Wpf\WebPlayground.Wpf.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Update="chromiumembeddedframework.runtime.win-arm64" Version="135.0.22" />
+    <PackageReference Update="chromiumembeddedframework.runtime.win-x64" Version="135.0.22" />
+    <PackageReference Update="chromiumembeddedframework.runtime.win-x86" Version="135.0.22" />
   </ItemGroup>
 </Project>
