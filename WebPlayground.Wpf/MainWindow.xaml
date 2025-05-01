@@ -11,12 +11,12 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
         <Grid Grid.Row="0"  Background="#FFCFE6DD">
             <Grid.RowDefinitions>
-                <RowDefinition Height="20" ></RowDefinition>
+                <RowDefinition Height="15" ></RowDefinition>
                 <RowDefinition Height="auto" ></RowDefinition>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
@@ -27,14 +27,14 @@
             <TextBlock Grid.Column="0" Text="HTML" FontFamily="Segoe UI Semibold"/>
             <TextBlock Grid.Column="1" Text="CSS" FontFamily="Segoe UI Semibold"/>
             <TextBlock Grid.Column="2" Text="JavaScript" FontFamily="Segoe UI Semibold"/>
-            <TextBox x:Name="htmlTextBox" Grid.Column="0" Grid.Row="1" TextWrapping="Wrap" AcceptsReturn="True" Margin="0,5" Height="200" FontFamily="Consolas"/>
-            <TextBox x:Name="cssTextBox" Grid.Column="1" Grid.Row="1" TextWrapping="Wrap" AcceptsReturn="True" Margin="5" Height="200" FontFamily="Consolas"/>
-            <TextBox x:Name="jsTextBox" Grid.Column="2" Grid.Row="1" TextWrapping="Wrap" AcceptsReturn="True" Margin="5" Height="200" FontFamily="Consolas"/>
+            <TextBox x:Name="htmlTextBox" Grid.Column="0" Grid.Row="1" TextWrapping="Wrap" AcceptsReturn="True" Margin="0,3" Height="250" FontFamily="Consolas"/>
+            <TextBox x:Name="cssTextBox" Grid.Column="1" Grid.Row="1" TextWrapping="Wrap" AcceptsReturn="True" Margin="3" Height="250" FontFamily="Consolas"/>
+            <TextBox x:Name="jsTextBox" Grid.Column="2" Grid.Row="1" TextWrapping="Wrap" AcceptsReturn="True" Margin="3" Height="250" FontFamily="Consolas"/>
         </Grid>
         <DockPanel Grid.Row="1">
             <StackPanel Orientation="Horizontal" Background="#FFD5EBA1" DockPanel.Dock="Top">
-                <Button Content="Run" Click="Run_Click" Margin="0,0,5,0" FontSize="16"/>
-                <Button Content="Clear" Click="Clear_Click" Margin="3,0,0,0" FontSize="16"/>
+                <Button Content="Run" Click="Run_Click" Margin="0,0,5,0" FontSize="16" Background="#FF0F6878" Foreground="White"/>
+                <Button Content="Clear" Click="Clear_Click" Margin="3,0,0,0" FontSize="16" Background="#FF3E0C48" Foreground="#FFFFD5D5"/>
             </StackPanel>
             <wpf:ChromiumWebBrowser x:Name="webBrowser" DockPanel.Dock="Bottom">
 

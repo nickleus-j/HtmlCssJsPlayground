@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -39,7 +40,8 @@ namespace WebPlayground.Wpf
             string css = "<style>" + cssTextBox.Text + "</style>";
             string js = "<script>" + jsTextBox.Text + "</script>";
 
-            string fullHtml = html + css + js;
+            string fullHtml = $"<html><head><style>{css}</style></head><body>{html}<script>{js}</script></body></html>";
+        
             if (isValidateContent())
             {
                 webBrowser.LoadHtml(fullHtml);
@@ -53,9 +55,9 @@ namespace WebPlayground.Wpf
         }
         private bool isValidateContent()
         {
-            bool validCss=WebLangValidator.IsValidCss(cssTextBox.Text);
+            bool validCss=WebLangValidator.IsValidCss(cssTextBox.Text)|| String.IsNullOrWhiteSpace(cssTextBox.Text);
             return validCss
-                && WebLangValidator.IsValidECMAScript(jsTextBox.Text)
+                && (WebLangValidator.IsValidECMAScript(jsTextBox.Text)|| String.IsNullOrWhiteSpace(jsTextBox.Text))
                 && WebLangValidator.IsValidHtml(htmlTextBox.Text);
         }
         private void Clear_Click(object sender, RoutedEventArgs e)
