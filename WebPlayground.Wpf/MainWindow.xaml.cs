@@ -45,11 +45,11 @@ namespace WebPlayground.Wpf
             if (isValidateContent())
             {
                 webBrowser.LoadHtml(fullHtml);
-                Title = "Valid";
+                CodeResult.Text = "Valid";
             }
             else
             {
-                Title = "Invalid";
+                CodeResult.Text = "Invalid";
             }
             
         }

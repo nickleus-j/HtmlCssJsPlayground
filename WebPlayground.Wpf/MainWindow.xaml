@@ -35,6 +35,7 @@
             <StackPanel Orientation="Horizontal" Background="#FFD5EBA1" DockPanel.Dock="Top">
                 <Button Content="Run" Click="Run_Click" Margin="0,0,5,0" FontSize="16" Background="#FF0F6878" Foreground="White"/>
                 <Button Content="Clear" Click="Clear_Click" Margin="3,0,0,0" FontSize="16" Background="#FF3E0C48" Foreground="#FFFFD5D5"/>
+                <TextBlock x:Name="CodeResult" FontFamily="Century Gothic" FontSize="18" Margin="20,0,0,0"/>
             </StackPanel>
             <wpf:ChromiumWebBrowser x:Name="webBrowser" DockPanel.Dock="Bottom">
 
